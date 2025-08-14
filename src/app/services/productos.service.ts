@@ -21,4 +21,15 @@ export class ProductosService {
   deleteProducto(id: number): Observable<void> {
     return this.http.delete<void>(`${this.API_STRING}/eliminar/${id}`);
   }
+  //antes de actualizar buscar el producto por el id
+  buscarProductoId(id:number):Observable<Producto>{
+    return this.http.get<Producto>(`${this.API_STRING}/buscar/${id}`);
+  }
+  //Actualizar
+  actualizarProducto(id: number, producto: Producto): Observable<Producto> {
+    return this.http.put<Producto>(
+      `${this.API_STRING}/actualizar/${id}`,
+      producto
+    );
+  }
 }

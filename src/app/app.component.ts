@@ -5,7 +5,7 @@ import { ProductosPageComponent } from "./pages/productos-page/productos-page.co
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ ProductosPageComponent],
+  imports: [ RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
